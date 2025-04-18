@@ -1,8 +1,10 @@
 let key = "06c63cbc3e714d4fd60883of7efa4t87";
 
 function getJoke() {
-  let prompt = "Tell me a joke please!";
-  let context = "Use a new joke everytime.";
+  let prompt =
+    "You are a witty AI bot, with a ton of fresh and new jokes, please tell me one!";
+  let context =
+    "Please do your best not to repeat any jokes you have told me before.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${key}`;
   axios.get(apiUrl).then(showAnswer);
 }
